@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a multi-step registration form component page. It allows users to register by filling out their information in a step-by-step process."
+    />
+    <title>Multi-step Register Form</title>
+    <script type="module" crossorigin src="/assets/index.js"></script>
+    <link rel="stylesheet" href="/assets/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <form class="step-1-form" data-cy="step-1-form">
+        <h2 class="step-1-form__heading">Register</h2>
+        <label class="step-1-form__label">
+          Name
+          <input
+            class="step-1-form__input"
+            name="name"
+            type="text"
+            placeholder="John Doe"
+            required
+          />
+        </label>
+        <label class="step-1-form__label">
+          Email
+          <input
+            class="step-1-form__input"
+            name="email"
+            type="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </label>
+        <button class="step-1-form__button" type="submit">Continue</button>
+      </form>
+      <form class="step-2-form hidden" data-cy="step-2-form">
+        <h2 class="step-2-form__heading">
+          Which topics you are interested in?
+        </h2>
+        <label class="step-2-form__label" data-cy="step-2-form__label">
+          <input
+            class="step-2-form__input"
+            type="checkbox"
+            value="Software Development"
+            name="topic"
+          />
+          Software Development
+        </label>
+        <label class="step-2-form__label" data-cy="step-2-form__label">
+          <input
+            class="step-2-form__input"
+            type="checkbox"
+            value="User Experience"
+            name="topic"
+          />
+          User Experience
+        </label>
+        <label class="step-2-form__label" data-cy="step-2-form__label">
+          <input
+            class="step-2-form__input"
+            type="checkbox"
+            value="Graphic Design"
+            name="topic"
+          />
+          Graphic Design
+        </label>
+        <button class="step-2-form__button" type="submit">Continue</button>
+      </form>
+      <form class="step-3-form" data-cy="step-3-form">
+        <h2 class="step-3-form__heading">Summary</h2>
+        <p class="step-3-form__data">
+          <span class="step-3-form__label">Name:</span>
+          <span class="step-3-form__name" data-cy="step-3-form__name"
+            >Test Name</span
+          >
+        </p>
+        <p class="step-3-form__data">
+          <span class="step-3-form__label">Email:</span>
+          <span class="step-3-form__email" data-cy="step-3-form__email"
+            >example@gmail.com</span
+          >
+        </p>
+        <p class="step-3-form__data">
+          <span class="step-3-form__label">Topics:</span>
+        </p>
+        <ul class="step-3-form__list" data-cy="step-3-form__list">
+          <li>Software Development</li>
+          <li>User Experience</li>
+        </ul>
+        <button class="step-3-form__button" type="submit">Confirm</button>
+      </form>
+      <div class="stepper">
+        <p class="stepper__current-step">
+          Step <span class="stepper__step" data-cy="stepper__value">1</span> of
+          3
+        </p>
+        <div class="stepper__circles">
+          <div
+            class="stepper__circle stepper__circle--active stepper__circle--current"
+          ></div>
+          <div class="stepper__circle"></div>
+          <div class="stepper__circle"></div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
